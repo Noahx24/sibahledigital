@@ -939,8 +939,8 @@ function CTABanner({ onConsult }) {
             aria-label="Open consultation request form">
             Request a Consultation <Arr/>
           </button>
-          <a href="mailto:contact@sibahledigital.com" className="btn-s"
-            aria-label="Send us an email at contact@sibahledigital.com">
+          <a href="mailto:contact@sibahledigital.co.za" className="btn-s"
+            aria-label="Send us an email at contact@sibahledigital.co.za">
             Send an Email <Arr/>
           </a>
         </div>
@@ -971,7 +971,7 @@ function Contact({ onConsult }) {
               Every engagement starts with a conversation. Tell us about your organisation and the challenge you're facing. We'll take it from there.
             </p>
             {[
-              { l:"Email",         v:"contact@sibahledigital.com"  },
+              { l:"Email",         v:"contact@sibahledigital.co.za"  },
               { l:"Based in",      v:"South Africa"  },
               { l:"Response time", v:"Within 1 to 2 business days" },
             ].map(c => (
