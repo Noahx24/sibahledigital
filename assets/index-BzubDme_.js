@@ -138,20 +138,6 @@ select option{background:#141428;color:#FFFFFF;}
 .mob-link{font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#9298BC;text-decoration:none;padding:14px 0;border-bottom:1px solid #2A2A50;letter-spacing:-0.025em;transition:color 0.18s;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;text-align:left;width:100%;min-height:44px;display:flex;align-items:center;}
 .mob-link:hover{color:#00C896;}
 
-/* ── Floating mobile CTA ── */
-.fab{
-  position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:90;
-  display:none;
-  background:linear-gradient(120deg,#00C896,#00FFD1);
-  color:#06060F;border:none;
-  padding:14px 32px;border-radius:9999px;
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:13px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;
-  box-shadow:0 8px 32px rgba(0,200,150,0.4);
-  cursor:pointer;white-space:nowrap;
-  animation:fadeUp 0.4s ease both;
-}
-
 /* ── Responsive ── */
 @media(max-width:1024px){
   .two-col,.three-col,.five-col{grid-template-columns:1fr!important;}
