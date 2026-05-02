@@ -83,7 +83,7 @@ function LogoMark({ size = 32 }) {
 }
 
 function Logo({ size = "sm", showTagline = false }) {
-  const cfg = { xs:[22,14], sm:[28,15], md:[38,19], lg:[56,28], xl:[80,40] };
+  const cfg = { xs:[26,15], sm:[32,18], md:[46,22], lg:[68,34], xl:[96,48] };
   const [markSz, nameSz] = cfg[size] || cfg.sm;
   return (
     <div style={{ display:"flex", alignItems:"center", gap: markSz * 0.32 }}>
@@ -264,15 +264,17 @@ select option{background:#141428;color:#FFFFFF;}
 }
 
 /* ── Responsive ── */
-@media(max-width:768px){
-  .d-only{display:none!important;}.m-only{display:flex!important;}
-  .two-col,.three-col{grid-template-columns:1fr!important;}
+@media(max-width:1024px){
+  .two-col,.three-col,.five-col{grid-template-columns:1fr!important;}
   .s-pad{padding:64px 20px!important;}
   .h-pad{padding:128px 20px 80px!important;}
+}
+@media(max-width:768px){
+  .d-only{display:none!important;}.m-only{display:flex!important;}
   .cap-row{grid-template-columns:1fr!important;}
   .cap-num{margin-bottom:4px;}
   .fab{display:flex;}
-  .five-col{grid-template-columns:1fr 1fr!important;}
+  .five-col{grid-template-columns:1fr!important;}
   .five-col > *:last-child{grid-column:1/-1;}
 }
 @media(min-width:769px){.m-only{display:none!important;}}
@@ -418,7 +420,7 @@ function Nav({ onConsult }) {
         <button onClick={() => window.scrollTo({ top:0, behavior:"smooth" })}
           aria-label="Scroll to top"
           style={{ background:"none", border:"none", cursor:"pointer", padding:"8px 8px 8px 0", display:"flex", alignItems:"center" }}>
-          <Logo size="sm"/>
+          <Logo size="md"/>
         </button>
 
         <div className="d-only" style={{ display:"flex", alignItems:"center", gap:24 }}>
@@ -903,17 +905,15 @@ function WhoWeWorkWith() {
             We are industry-agnostic. If you have a problem, we can help solve it.
           </p>
         </div>
-        <ul style={{ display:"flex", flexWrap:"wrap", gap:10, listStyle:"none", margin:0, padding:0 }}>
+        <ul style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))", gap:16, listStyle:"none", margin:0, padding:0 }}>
           {groups.map((g, i) => (
             <li key={i} style={{ background:T.card, border:`1px solid ${T.bdr}`,
-              borderRadius:"9999px", padding:"12px 22px",
-              display:"flex", alignItems:"center", gap:10,
-              flex:"1 1 190px", transition:"border-color 0.22s" }}
-              onMouseEnter={e => e.currentTarget.style.borderColor = g.accent+"70"}
-              onMouseLeave={e => e.currentTarget.style.borderColor = T.bdr}>
-              <div aria-hidden="true" style={{ width:7, height:7, borderRadius:"50%",
-                background:g.accent, flexShrink:0 }}/>
-              <span style={{ fontSize:13, fontWeight:600, color:T.white }}>{g.label}</span>
+              borderRadius:T.rLg, padding:"22px 24px", transition:"border-color 0.22s" }}>
+              <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:10 }}>
+                <div aria-hidden="true" style={{ width:10, height:10, borderRadius:"50%",
+                  background:g.accent, flexShrink:0 }}/>
+                <span style={{ fontSize:13, fontWeight:700, color:T.white }}>{g.label}</span>
+              </div>
             </li>
           ))}
         </ul>
@@ -953,8 +953,8 @@ function CTABanner({ onConsult }) {
             aria-label="Open consultation request form">
             Request a Consultation <Arr/>
           </button>
-          <a href="mailto:sibhalexdigital@gmail.com" className="btn-s"
-            aria-label="Send us an email at sibhalexdigital@gmail.com">
+          <a href="mailto:contact@sibahledigital.com" className="btn-s"
+            aria-label="Send us an email at contact@sibahledigital.com">
             Send an Email <Arr/>
           </a>
         </div>
@@ -985,8 +985,8 @@ function Contact({ onConsult }) {
               Every engagement starts with a conversation. Tell us about your organisation and the challenge you're facing. We'll take it from there.
             </p>
             {[
-              { l:"Email",         v:"sibhalexdigital@gmail.com"  },
-              { l:"Based in",      v:"Johannesburg, South Africa"  },
+              { l:"Email",         v:"contact@sibahledigital.com"  },
+              { l:"Based in",      v:"South Africa"  },
               { l:"Response time", v:"Within 1 to 2 business days" },
             ].map(c => (
               <div key={c.l} style={{ marginBottom:24 }}>
@@ -1286,7 +1286,9 @@ export default function App() {
       </main>
 
       <Footer/>
-
+      <button className="fab" type="button" onClick={openModal} aria-label="Open consultation form">
+        Request a Consultation
+      </button>
 
       {modal && <Modal onClose={closeModal}/>}
     </>
