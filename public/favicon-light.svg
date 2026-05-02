@@ -1,0 +1,24 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="hubL" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#00B884"/>
+      <stop offset="100%" stop-color="#008C68"/>
+    </radialGradient>
+    <radialGradient id="ndL" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#00A87A"/>
+      <stop offset="100%" stop-color="#007A58"/>
+    </radialGradient>
+    <filter id="glowL" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <line x1="100" y1="112" x2="28" y2="76" stroke="#008C68" stroke-width="4.4" stroke-linecap="round" opacity="0.25"/>
+  <line x1="100" y1="112" x2="100" y2="28" stroke="#008C68" stroke-width="4.4" stroke-linecap="round" opacity="0.25"/>
+  <line x1="100" y1="112" x2="172" y2="76" stroke="#008C68" stroke-width="4.4" stroke-linecap="round" opacity="0.25"/>
+  <circle cx="28" cy="76" r="14" fill="url(#ndL)" opacity="0.8"/>
+  <circle cx="100" cy="28" r="17" fill="url(#ndL)" opacity="0.85" filter="url(#glowL)"/>
+  <circle cx="172" cy="76" r="14" fill="url(#ndL)" opacity="0.8"/>
+  <circle cx="100" cy="112" r="38.5" fill="#008C68" opacity="0.08"/>
+  <circle cx="100" cy="112" r="23" fill="url(#hubL)" filter="url(#glowL)"/>
+</svg>
