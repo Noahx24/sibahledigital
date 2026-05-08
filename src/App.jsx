@@ -280,15 +280,6 @@ function Nav({ onConsult }) {
               {l}
             </button>
           ))}
-          {/* B-BBEE badge in nav */}
-          <div style={{
-            background:"rgba(0,200,150,0.10)", border:"1px solid rgba(0,200,150,0.28)",
-            borderRadius:"9999px", padding:"4px 12px", fontSize:10,
-            fontWeight:800, letterSpacing:"0.1em", color:"#00C896",
-            textTransform:"uppercase", whiteSpace:"nowrap"
-          }}>
-            B-BBEE Level 1
-          </div>
         </div>
 
         <button className="btn-p d-only" onClick={onConsult}
@@ -805,12 +796,6 @@ function Footer() {
           flexWrap:"wrap",gap:16,marginBottom:20,paddingBottom:20,borderBottom:`1px solid ${T.bdr}`}}>
           <Logo size="sm"/>
           <div style={{display:"flex",flexWrap:"wrap",gap:16,alignItems:"center"}}>
-            {/* B-BBEE badge */}
-            <div style={{background:"rgba(0,200,150,0.10)",border:"1px solid rgba(0,200,150,0.28)",
-              borderRadius:"9999px",padding:"5px 14px",fontSize:11,fontWeight:800,
-              letterSpacing:"0.1em",color:T.teal,textTransform:"uppercase"}}>
-              B-BBEE Level 1 · 100% Black Owned
-            </div>
             <span style={{fontSize:12,color:T.muted}}>Reg. 2026/268533/07</span>
           </div>
           <nav aria-label="Footer navigation" style={{display:"flex",gap:20}}>
