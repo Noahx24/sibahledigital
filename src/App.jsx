@@ -379,29 +379,12 @@ function Hero({ onConsult }) {
             See What We Build <Arr/>
           </button>
         </div>
-
-        {/* Credential chips */}
-        <div style={{marginTop:56,paddingTop:40,borderTop:`1px solid ${T.bdr}`,
-          display:"flex",flexWrap:"wrap",gap:12,animation:"fadeUp 0.6s ease 0.4s both"}}>
-          {[
-            { n:"B-BBEE Level 1",     s:"100% Black-owned enterprise"          },
-            { n:"AWS Certified",      s:"Solutions Architect — Associate"       },
-            { n:"Odoo Platform",      s:"ERP, HR, Finance, Custom Modules"      },
-            { n:"South Africa First", s:"Local team. Local support. Local data" },
-          ].map(b => (
-            <div key={b.n} style={{background:T.card,border:`1px solid ${T.bdr}`,
-              borderRadius:T.rMd,padding:"16px 20px",display:"flex",flexDirection:"column",gap:4}}>
-              <span style={{fontFamily:"'Outfit',sans-serif",fontWeight:800,fontSize:15,color:T.teal}}>{b.n}</span>
-              <span style={{fontSize:11,color:T.muted}}>{b.s}</span>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
 }
 
-/* ─── ABOUT / FOUNDER ────────────────────────────────────── */
+/* ─── ABOUT────────────────────────────────────── */
 function About() {
   return (
     <section id="story" aria-labelledby="about-heading"
@@ -432,69 +415,8 @@ function About() {
                 The name <strong style={{color:T.white}}>Sibahle</strong> reflects a simple commitment: technology that uplifts people rather than simply automating processes.
               </p>
               <p className="body-text" style={{marginTop:16}}>
-                Every system we build is designed with <strong style={{color:T.white}}>empathy, practicality and local context</strong> in mind. We build for how organisations actually work — not for how a vendor thinks they should.
+                Every system we build is designed with <strong style={{color:T.white}}>empathy, practicality and local context</strong> in mind. We build for how organisations actually work.
               </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Founder profile */}
-        <div style={{background:T.card,border:`1px solid ${T.bdr}`,
-          borderRadius:T.rLg,padding:"36px 32px",marginBottom:16}}>
-          <div className="two-col" style={{display:"grid",gridTemplateColumns:"auto 1fr",gap:40,alignItems:"start"}}>
-            {/* Avatar */}
-            <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:16,minWidth:160}}>
-              <div style={{width:100,height:100,borderRadius:"50%",
-                background:"linear-gradient(135deg,rgba(0,200,150,0.2),rgba(0,200,150,0.05))",
-                border:"2px solid rgba(0,200,150,0.4)",
-                display:"flex",alignItems:"center",justifyContent:"center"}}>
-                <span style={{fontFamily:"'Outfit',sans-serif",fontWeight:900,fontSize:32,color:T.teal}}>NA</span>
-              </div>
-              <div style={{textAlign:"center"}}>
-                <div style={{fontFamily:"'Outfit',sans-serif",fontWeight:800,fontSize:16,color:T.white,marginBottom:4}}>
-                  Noah Anelisiwe Mbude
-                </div>
-                <div style={{fontSize:12,color:T.muted}}>Founder & Director</div>
-              </div>
-              <div style={{display:"flex",flexDirection:"column",gap:6,width:"100%"}}>
-                {["B-BBEE Level 1","100% Black-Owned","Reg. 2026/268533/07"].map(t => (
-                  <div key={t} style={{background:"rgba(0,200,150,0.08)",
-                    border:"1px solid rgba(0,200,150,0.20)",borderRadius:"9999px",
-                    padding:"4px 12px",textAlign:"center",fontSize:10,fontWeight:700,
-                    letterSpacing:"0.06em",color:T.teal,textTransform:"uppercase"}}>
-                    {t}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Bio */}
-            <div>
-              <div className="sec-label" style={{marginBottom:20}}>
-                <div className="sec-divider"/>
-                <span className="eyebrow">The Founder</span>
-                <h2 className="display" style={{fontSize:"clamp(22px,3.5vw,36px)"}}>
-                  Senior systems architect. Public sector delivery specialist.
-                </h2>
-              </div>
-              <p className="body-text" style={{marginBottom:16}}>
-                Noah holds a <strong style={{color:T.white}}>B.Eng in Industrial Engineering from Stellenbosch University</strong> and brings over five years of senior enterprise software delivery experience across Telecommunications (Telkom via Falcorp), FinTech (FNB), Management Consulting (Accenture), and Supply Chain.
-              </p>
-              <p className="body-text" style={{marginBottom:24}}>
-                That track record — designing API gateways, integrating HR and ERP systems, delivering cloud architecture in regulated environments — is the foundation every Sibahle Digital engagement is built on.
-              </p>
-              {/* Cert chips */}
-              <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
-                {[
-                  "AWS Solutions Architect — Associate",
-                  "AWS Cloud Practitioner",
-                  "UiPath Professional Business Analyst",
-                  "B.Eng Industrial Engineering (Stellenbosch)",
-                  "LLB in progress (UNISA)",
-                ].map(c => (
-                  <span key={c} className="tag">{c}</span>
-                ))}
-              </div>
             </div>
           </div>
         </div>
@@ -506,13 +428,13 @@ function About() {
               accent:T.teal, dimBg:"rgba(0,200,150,0.08)", dimBorder:"rgba(0,200,150,0.24)",
               label:"Our Mission",
               heading:"Build software that solves real problems",
-              body:"We don't sell products. We identify operational problems — inefficiency, disconnected data, manual processes — and build systems that eliminate them. Every engagement starts with understanding how you work, not with fitting you into a template.",
+              body:"We don't sell products. We identify operational problems and build systems that eliminate them. Every engagement starts with understanding how you work, not with fitting you into a template.",
             },
             {
               accent:"#6B9FFF", dimBg:"rgba(107,159,255,0.08)", dimBorder:"rgba(107,159,255,0.24)",
               label:"Our Commitment",
               heading:"Senior attention on every project",
-              body:"You work directly with the person who designed and built the system — not a junior team handed a spec. That means faster decisions, no lost context, and a single point of accountability from first line of code to post-go-live support.",
+              body:"You work directly with the person who designed and built the system. That means faster decisions, no lost context, and a single point of accountability from first line of code to post-go-live support.",
             },
           ].map((c,i) => (
             <div key={i} style={{background:T.card,border:`1px solid ${T.bdr}`,
@@ -533,11 +455,11 @@ function About() {
 function TechStack() {
   const stack = [
     { cat:"ERP Platform",    tools:["Odoo 17","Odoo Community","Odoo Enterprise","Custom Odoo Modules"],     accent:T.teal },
-    { cat:"Cloud & Infra",   tools:["AWS (af-south-1)","EC2 / RDS / S3","AWS Lambda","Docker / Kubernetes"], accent:"#6B9FFF" },
+    { cat:"Cloud & Infra",   tools:["AWS","EC2 / RDS / S3","AWS Lambda","Docker / Kubernetes"], accent:"#6B9FFF" },
     { cat:"Backend",         tools:["Python 3","Java","REST APIs","SOAP / XML-RPC","PostgreSQL"],            accent:"#FFB830" },
     { cat:"Frontend",        tools:["React","JavaScript (ES6+)","HTML5 / CSS3","Responsive Web"],            accent:"#FF8A6E" },
     { cat:"Integration",     tools:["OAuth 2.0","SAML 2.0 SSO","SCIM","API Gateways","SFTP"],               accent:"#B87AFF" },
-    { cat:"Analytics & AI",  tools:["Python ML (scikit-learn)","PowerBI","Tableau","UiPath RPA"],            accent:T.teal },
+    { cat:"Analytics & AI",  tools:["Python ML","PowerBI","Tableau","UiPath RPA"],            accent:T.teal },
   ];
   return (
     <section style={{background:T.bg0,borderTop:`1px solid ${T.bdr}`,padding:"80px 40px"}}
@@ -550,7 +472,7 @@ function TechStack() {
             The tools behind every build
           </h2>
           <p className="body-text" style={{maxWidth:520}}>
-            We choose the right tool for the problem — not the trendiest one. Proven platforms, open standards, South African data residency.
+            We choose the right tool for the problem.
           </p>
         </div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))",gap:12}}>
@@ -600,7 +522,7 @@ function WhatWeDo() {
             </div>
           </div>
           <p className="body-text" style={{maxWidth:460}}>
-            Every engagement is scoped around the specific challenge. We don't sell modules — we solve problems.
+            Every engagement is scoped around the specific challenge.
           </p>
         </div>
         <ol style={{listStyle:"none",margin:0,padding:0}} aria-label="What we build">
@@ -625,21 +547,10 @@ function Solutions() {
     {
       cat:"Enterprise Resource Planning",
       hl:"Replace spreadsheets and disconnected tools with a single, integrated system",
-      desc:"Full Odoo ERP covering Finance, Accounting, HR, Procurement, Inventory and Project Management. PFMA and GRAP-aligned for public sector. Cloud-hosted with South African data residency.",
+      desc:"Full Odoo ERP covering Finance, Accounting, HR, Procurement, Inventory and Project Management. PFMA and GRAP-aligned for public sector. Cloud-hosted.",
       tags:["Odoo ERP","Finance","HR","Procurement","Public Sector"],
     },
-    {
-      cat:"e-Performance Management",
-      hl:"Automate your performance cycle from strategic objectives to individual KPIs",
-      desc:"Sibahle ePerform — our flagship solution. Strategic objectives linked to BSC perspectives, individual KPIs, 360° feedback, automated workflows, performance locking, and Board/EXCO reporting.",
-      tags:["ePerform","Balanced Scorecard","360° Feedback","SOE & Government"],
-    },
-    {
-      cat:"Occupational Health & Safety",
-      hl:"OHSA and COIDA-compliant surveillance, fitness certification and incident management",
-      desc:"Medical surveillance scheduling, fitness-for-duty certification, audiometry and spirometry tracking, COIDA IOD case management, and statutory reporting. Built for regulated environments.",
-      tags:["OHSA","COIDA","Medical Surveillance","Fitness-for-Duty"],
-    },
+
     {
       cat:"Custom Application Development",
       hl:"A business problem that doesn't fit any existing product",
@@ -672,7 +583,7 @@ function Solutions() {
           <div style={{background:"rgba(0,200,150,0.08)",border:"1px solid rgba(0,200,150,0.20)",
             borderRadius:T.rMd,padding:"16px 20px",maxWidth:800}}>
             <p style={{color:T.teal,fontSize:14,lineHeight:1.7,fontWeight:500}}>
-              We don't sell products. We solve specific business problems — then build the system that eliminates them.
+              We don't sell products. We solve specific business problems then build the system that eliminates them.
             </p>
           </div>
         </div>
@@ -701,7 +612,7 @@ function Solutions() {
 /* ─── WHO WE WORK WITH ───────────────────────────────────── */
 function WhoWeWorkWith() {
   const groups = [
-    { label:"State-Owned Companies & SOEs",        accent:T.teal    },
+    { label:"State-Owned Companies",        accent:T.teal    },
     { label:"Government Departments & Municipalities", accent:"#6B9FFF" },
     { label:"Private Companies & SMEs",            accent:"#FFB830" },
     { label:"NGOs and Community Organisations",    accent:"#FF8A6E" },
@@ -850,7 +761,7 @@ function Contact({ onConsult }) {
             {[
               { l:"Email",         v:"contact@sibahledigital.co.za"  },
               { l:"Website",       v:"www.sibahledigital.co.za"       },
-              { l:"Based in",      v:"Johannesburg, South Africa"     },
+              { l:"Based in",      v:"South Africa"     },
               { l:"Response time", v:"Within 1 business day"         },
             ].map(c => (
               <div key={c.l} style={{marginBottom:20}}>
