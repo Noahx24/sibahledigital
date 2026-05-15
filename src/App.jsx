@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useCallback, useRef } from "react";
 
 /* ─── DESIGN TOKENS ─────────────────────────────────────── */
 const T = {
@@ -806,8 +806,8 @@ function Footer() {
               <a key={label} href={href}
                 style={{fontSize:13,color:T.body,fontWeight:500,transition:"color 0.2s",
                   padding:"4px 0",minHeight:44,display:"flex",alignItems:"center",textDecoration:"none"}}
-                onMouseEnter={e=>e.target.style.color=T.teal}
-                onMouseLeave={e=>e.target.style.color=T.body}>
+                onMouseEnter={e=>e.currentTarget.style.color=T.teal}
+                onMouseLeave={e=>e.currentTarget.style.color=T.body}>
                 {label}
               </a>
             ))}
@@ -815,8 +815,8 @@ function Footer() {
               style={{fontSize:13,color:T.body,background:"none",border:"none",
                 cursor:"pointer",fontWeight:500,transition:"color 0.2s",padding:"4px 0",
                 minHeight:44,display:"flex",alignItems:"center"}}
-              onMouseEnter={e=>e.target.style.color=T.teal}
-              onMouseLeave={e=>e.target.style.color=T.body}>
+              onMouseEnter={e=>e.currentTarget.style.color=T.teal}
+              onMouseLeave={e=>e.currentTarget.style.color=T.body}>
               Contact
             </button>
           </nav>
@@ -839,7 +839,7 @@ function Modal({ onClose }) {
 
   const up = (k,v) => { setForm(f=>({...f,[k]:v})); if(errs[k]) setErrs(e=>({...e,[k]:undefined})); };
 
-  useEffect(() => { setTimeout(()=>firstRef.current?.focus(),50); }, []);
+  useLayoutEffect(() => { firstRef.current?.focus(); }, []);
   useEffect(() => {
     const fn = e => { if(e.key==="Escape") onClose(); };
     window.addEventListener("keydown",fn);
