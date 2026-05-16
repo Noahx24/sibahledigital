@@ -442,50 +442,7 @@ function About() {
   );
 }
 
-/* ─── TECH STACK ─────────────────────────────────────────── */
-function TechStack() {
-  const stack = [
-    { cat:"ERP Platform",    tools:["Odoo 17","Odoo Community","Odoo Enterprise","Custom Odoo Modules"],     accent:T.teal },
-    { cat:"Cloud & Infra",   tools:["AWS","EC2 / RDS / S3","AWS Lambda","Docker / Kubernetes"], accent:"#6B9FFF" },
-    { cat:"Backend",         tools:["Python 3","Java","REST APIs","SOAP / XML-RPC","PostgreSQL"],            accent:"#FFB830" },
-    { cat:"Frontend",        tools:["React","JavaScript (ES6+)","HTML5 / CSS3","Responsive Web"],            accent:"#FF8A6E" },
-    { cat:"Integration",     tools:["OAuth 2.0","SAML 2.0 SSO","SCIM","API Gateways","SFTP"],               accent:"#B87AFF" },
-    { cat:"Analytics & AI",  tools:["Python ML","PowerBI","Tableau","UiPath RPA"],            accent:T.teal },
-  ];
-  return (
-    <section style={{background:T.bg0,borderTop:`1px solid ${T.bdr}`,padding:"80px 40px"}}
-      className="s-pad">
-      <div style={{maxWidth:1080,margin:"0 auto"}}>
-        <div className="sec-label">
-          <div className="sec-divider"/>
-          <span className="eyebrow">Technology Stack</span>
-          <h2 className="display" style={{fontSize:"clamp(24px,4vw,42px)",maxWidth:500}}>
-            The tools behind every build
-          </h2>
-          <p className="body-text" style={{maxWidth:520}}>
-            We choose the right tool for the problem.
-          </p>
-        </div>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))",gap:12}}>
-          {stack.map((s,i) => (
-            <div key={i} style={{background:T.card,border:`1px solid ${T.bdr}`,
-              borderRadius:T.rMd,padding:"24px 20px"}}>
-              <div style={{fontSize:10,fontWeight:700,letterSpacing:"0.18em",
-                textTransform:"uppercase",color:s.accent,marginBottom:14}}>{s.cat}</div>
-              <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
-                {s.tools.map(t => (
-                  <span key={t} style={{background:`rgba(255,255,255,0.05)`,
-                    border:`1px solid ${T.bdr}`,borderRadius:"9999px",
-                    padding:"4px 12px",fontSize:12,color:T.body,fontWeight:500}}>{t}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
 
 /* ─── WHAT WE BUILD ──────────────────────────────────────── */
 function WhatWeDo() {
