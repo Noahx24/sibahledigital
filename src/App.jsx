@@ -954,7 +954,6 @@ export default function App() {
       <main id="main-content" style={{background:T.bg0}}>
         <Hero         onConsult={openModal}/>
         <About/>
-        <TechStack/>
         <WhatWeDo/>
         <Solutions/>
         <WhoWeWorkWith/>
