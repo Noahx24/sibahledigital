@@ -455,7 +455,7 @@ function WhatWeDo() {
   ];
   return (
     <section id="what-we-do" aria-labelledby="whatwedo-heading"
-      style={{background:T.bg1,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
+      style={{background:T.bg0,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
       className="s-pad">
       <div style={{maxWidth:1080,margin:"0 auto"}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",
@@ -514,7 +514,7 @@ function Solutions() {
   ];
   return (
     <section id="solutions" aria-labelledby="solutions-heading"
-      style={{background:T.bg0,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
+      style={{background:T.bg1,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
       className="s-pad">
       <div style={{maxWidth:1080,margin:"0 auto"}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",
@@ -536,21 +536,34 @@ function Solutions() {
           </div>
         </div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(290px,1fr))",gap:16}}>
-          {sols.map((s,i) => (
-            <article key={i} className="card" style={{padding:"28px 24px"}}>
-              <div style={{display:"inline-block",marginBottom:14,
-                background:T.bg2,border:`1px solid ${T.bdr}`,
-                borderRadius:"9999px",padding:"3px 12px"}}>
-                <span style={{fontSize:10,fontWeight:700,letterSpacing:"0.14em",
-                  textTransform:"uppercase",color:T.muted}}>{s.cat}</span>
+          {sols.map((s,i) => {
+            const lead = i===0;
+            return (
+            <article key={i} className="card"
+              style={{padding:"28px 24px",display:"flex",flexDirection:"column",
+                ...(lead ? {background:"linear-gradient(160deg,rgba(0,200,150,0.09),#1A1A34 62%)",
+                  borderColor:"rgba(0,200,150,0.30)"} : null)}}>
+              <div style={{display:"flex",alignItems:"baseline",justifyContent:"space-between",
+                gap:12,marginBottom:14}}>
+                <div style={{display:"inline-block",
+                  background: lead ? "rgba(0,200,150,0.14)" : T.bg2,
+                  border:`1px solid ${lead ? "rgba(0,200,150,0.32)" : T.bdr}`,
+                  borderRadius:"9999px",padding:"3px 12px"}}>
+                  <span style={{fontSize:10,fontWeight:700,letterSpacing:"0.14em",
+                    textTransform:"uppercase",color: lead ? T.teal : T.muted}}>{s.cat}</span>
+                </div>
+                <span aria-hidden="true" style={{fontFamily:"'Outfit',sans-serif",fontWeight:900,
+                  fontSize:14,letterSpacing:"0.04em",
+                  color: lead ? T.teal : T.dim}}>{String(i+1).padStart(2,"0")}</span>
               </div>
-              <h3 className="strong" style={{fontSize:15,marginBottom:10,lineHeight:1.4}}>{s.hl}</h3>
+              <h3 className="strong" style={{fontSize: lead ? 17 : 15,marginBottom:10,lineHeight:1.4}}>{s.hl}</h3>
               <p style={{fontSize:13.5,color:T.body,lineHeight:1.78,marginBottom:16}}>{s.desc}</p>
-              <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
+              <div style={{display:"flex",flexWrap:"wrap",gap:8,marginTop:"auto"}}>
                 {s.tags.map(t => <span key={t} className="tag">{t}</span>)}
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
@@ -568,7 +581,7 @@ function WhoWeWorkWith() {
     { label:"Financial Services",                  accent:T.teal    },
   ];
   return (
-    <section style={{background:T.bg1,borderTop:`1px solid ${T.bdr}`,padding:"80px 40px"}}
+    <section style={{background:T.bg0,borderTop:`1px solid ${T.bdr}`,padding:"80px 40px"}}
       className="s-pad">
       <div style={{maxWidth:1080,margin:"0 auto"}}>
         <div className="sec-label">
@@ -610,7 +623,7 @@ function Process() {
   ];
   return (
     <section id="process" aria-labelledby="process-heading"
-      style={{background:T.bg0,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
+      style={{background:T.bg1,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
       className="s-pad">
       <div style={{maxWidth:1080,margin:"0 auto"}}>
         <div className="sec-label">
