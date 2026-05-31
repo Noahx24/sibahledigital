@@ -358,7 +358,8 @@ function Hero({ onConsult }) {
         </h1>
 
         <p className="body-text"
-          style={{maxWidth:540,marginBottom:48,animation:"fadeUp 0.6s ease 0.2s both"}}>
+          style={{maxWidth:560,marginBottom:48,fontSize:"clamp(16px,1.7vw,18px)",
+            lineHeight:1.65,color:"#D6DAEE",animation:"fadeUp 0.6s ease 0.2s both"}}>
           We apply AI and automation to eliminate the operational problems slowing your organisation down — manual processes, disconnected data, slow decisions. Any industry. Any problem. Any scale.
         </p>
 
