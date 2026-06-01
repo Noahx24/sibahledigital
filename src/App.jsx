@@ -105,13 +105,11 @@ button:focus-visible,a:focus-visible{border-radius:8px;}
 .strong{font-family:'Outfit',sans-serif;font-weight:700;line-height:1.18;letter-spacing:-0.02em;color:#FFFFFF;text-wrap:balance;}
 .eyebrow{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#00C896;font-family:'Plus Jakarta Sans',sans-serif;}
 .body-text{font-size:15px;color:#C4C8E0;line-height:1.75;text-wrap:pretty;}
-.teal-grad{background:linear-gradient(120deg,#00C896,#00FFD1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .zulu{font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(52px,9vw,108px);line-height:1;letter-spacing:-0.04em;background:linear-gradient(120deg,#00C896 0%,#00FFD1 55%,#FFFFFF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@keyframes pdot{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
 @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 .btn-p{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(118deg,#00C896,#00E6BE);color:#04130E;border:none;padding:14px 26px;min-height:46px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.01em;cursor:pointer;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,0.4),0 10px 24px -12px rgba(0,200,150,0.5);transition:transform 0.18s,box-shadow 0.18s,opacity 0.18s,filter 0.18s;text-decoration:none;white-space:nowrap;}
 .btn-p:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.05);box-shadow:0 2px 4px rgba(0,0,0,0.4),0 16px 32px -14px rgba(0,200,150,0.6);}
@@ -146,11 +144,6 @@ select option{background:#141428;color:#FFFFFF;}
 `;
 
 /* ─── Icons ──────────────────────────────────────────────── */
-const Arr = () => (
-  <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-    <path d="M1 7h12M7 1.5l5.5 5.5L7 12.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
 const MenuIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <path d="M3 7h18M3 12h18M3 17h12" stroke="#FFF" strokeWidth="1.8" strokeLinecap="round"/>
@@ -285,7 +278,7 @@ function Nav({ onConsult }) {
         <button className="btn-p d-only" onClick={onConsult}
           style={{padding:"9px 20px",fontSize:11}}
           aria-label="Start a project">
-          Start a Project <Arr/>
+          Start a Project
         </button>
 
         <button className="m-only" onClick={() => setOpen(true)}
@@ -313,7 +306,7 @@ function Nav({ onConsult }) {
             ))}
             <button className="btn-p" style={{marginTop:24,justifyContent:"center"}}
               onClick={() => { setOpen(false); onConsult(); }}>
-              Start a Project <Arr/>
+              Start a Project
             </button>
           </nav>
         </>
@@ -343,18 +336,16 @@ function Hero({ onConsult }) {
       <div className="h-pad" style={{maxWidth:1080,margin:"0 auto",width:"100%",
         position:"relative",zIndex:1,padding:"144px 40px 100px"}}>
 
-        <div aria-hidden="true" style={{display:"inline-flex",alignItems:"center",gap:9,
-          background:T.card,border:`1px solid ${T.bdr}`,borderRadius:"9999px",
-          padding:"7px 18px 7px 12px",marginBottom:36,animation:"fadeUp 0.5s ease both"}}>
-          <div style={{width:8,height:8,borderRadius:"50%",background:T.teal,
-            boxShadow:`0 0 10px ${T.teal}`,animation:"pdot 2s ease-in-out infinite"}}/>
-          <span className="eyebrow" style={{fontSize:10}}>Business Systems Design · South Africa</span>
+        <div className="sec-label" style={{gap:14,marginBottom:28,
+          animation:"fadeUp 0.5s ease both"}}>
+          <div className="sec-divider"/>
+          <span className="eyebrow">Business Systems Design · South Africa</span>
         </div>
 
         <h1 id="hero-heading" className="display"
           style={{fontSize:"clamp(40px,7vw,88px)",maxWidth:780,marginBottom:28,
             animation:"fadeUp 0.6s ease 0.1s both"}}>
-          We build systems that solve <span className="teal-grad">real</span> business problems.
+          We build systems that solve real business problems.
         </h1>
 
         <p className="body-text"
@@ -365,10 +356,10 @@ function Hero({ onConsult }) {
 
         <div style={{display:"flex",flexWrap:"wrap",gap:12,animation:"fadeUp 0.6s ease 0.3s both"}}>
           <button className="btn-p" onClick={onConsult}>
-            Start a Conversation <Arr/>
+            Start a Conversation
           </button>
           <button className="btn-s" onClick={() => scrollTo("solutions")}>
-            See What We Build <Arr/>
+            See What We Build
           </button>
         </div>
       </div>
@@ -688,10 +679,10 @@ function CTABanner({ onConsult }) {
         </p>
         <div style={{display:"flex",gap:12,justifyContent:"center",flexWrap:"wrap"}}>
           <button className="btn-p" onClick={onConsult}>
-            Start a Conversation <Arr/>
+            Start a Conversation
           </button>
           <a href="mailto:contact@sibahledigital.co.za" className="btn-s">
-            Email Us <Arr/>
+            Email Us
           </a>
         </div>
       </div>
@@ -742,11 +733,11 @@ function Contact({ onConsult }) {
             <div style={{borderTop:`1px solid ${T.bdr}`,paddingTop:24,
               display:"flex",flexDirection:"column",gap:16}}>
               <button className="btn-p" onClick={onConsult}>
-                Start a Conversation <Arr/>
+                Start a Conversation
               </button>
               <a href="mailto:contact@sibahledigital.co.za" className="btn-s"
                 style={{textAlign:"center",justifyContent:"center"}}>
-                contact@sibahledigital.co.za <Arr/>
+                contact@sibahledigital.co.za
               </a>
             </div>
           </div>
@@ -868,7 +859,7 @@ function Modal({ onClose }) {
               Noah will respond within 1 business day.
             </p>
             <button className="btn-p" onClick={onClose} style={{marginTop:24}}>
-              Close <Arr/>
+              Close
             </button>
           </div>
         ) : (
@@ -928,7 +919,7 @@ function Modal({ onClose }) {
               )}
               <button className="btn-p" onClick={handleSubmit} disabled={loading}
                 style={{justifyContent:"center",marginTop:4}} aria-busy={loading}>
-                {loading ? <><Spinner/> Sending...</> : <>Send Message <Arr/></>}
+                {loading ? <><Spinner/> Sending...</> : "Send Message"}
               </button>
               {errs.submit && (
                 <div role="alert" style={{marginTop:12,background:"rgba(255,107,107,0.08)",
