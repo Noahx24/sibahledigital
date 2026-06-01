@@ -101,10 +101,10 @@ section,footer{scroll-margin-top:80px;}
 button:focus-visible,a:focus-visible{border-radius:8px;}
 @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
 .progress-bar{position:fixed;top:0;left:0;z-index:200;height:2px;background:linear-gradient(90deg,#00C896,#00FFD1);transition:width 0.1s linear;}
-.display{font-family:'Outfit',sans-serif;font-weight:800;line-height:1.06;letter-spacing:-0.03em;color:#FFFFFF;}
-.strong{font-family:'Outfit',sans-serif;font-weight:700;line-height:1.15;letter-spacing:-0.02em;color:#FFFFFF;}
-.eyebrow{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#00C896;font-family:'Plus Jakarta Sans',sans-serif;}
-.body-text{font-size:15px;color:#C4C8E0;line-height:1.78;}
+.display{font-family:'Outfit',sans-serif;font-weight:800;line-height:1.06;letter-spacing:-0.035em;color:#FFFFFF;text-wrap:balance;}
+.strong{font-family:'Outfit',sans-serif;font-weight:700;line-height:1.18;letter-spacing:-0.02em;color:#FFFFFF;text-wrap:balance;}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#00C896;font-family:'Plus Jakarta Sans',sans-serif;}
+.body-text{font-size:15px;color:#C4C8E0;line-height:1.75;text-wrap:pretty;}
 .teal-grad{background:linear-gradient(120deg,#00C896,#00FFD1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .zulu{font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(52px,9vw,108px);line-height:1;letter-spacing:-0.04em;background:linear-gradient(120deg,#00C896 0%,#00FFD1 55%,#FFFFFF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
@@ -113,13 +113,13 @@ button:focus-visible,a:focus-visible{border-radius:8px;}
 @keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @keyframes pdot{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
 @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-.btn-p{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(120deg,#00C896,#00FFD1);color:#06060F;border:none;padding:13px 32px;min-height:44px;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;border-radius:9999px;box-shadow:0 4px 24px rgba(0,200,150,0.28);transition:transform 0.2s,box-shadow 0.2s,opacity 0.2s;text-decoration:none;white-space:nowrap;}
-.btn-p:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 36px rgba(0,200,150,0.44);}
+.btn-p{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(118deg,#00C896,#00E6BE);color:#04130E;border:none;padding:14px 26px;min-height:46px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.01em;cursor:pointer;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,0.4),0 10px 24px -12px rgba(0,200,150,0.5);transition:transform 0.18s,box-shadow 0.18s,opacity 0.18s,filter 0.18s;text-decoration:none;white-space:nowrap;}
+.btn-p:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.05);box-shadow:0 2px 4px rgba(0,0,0,0.4),0 16px 32px -14px rgba(0,200,150,0.6);}
 .btn-p:disabled{opacity:0.55;cursor:not-allowed;transform:none;}
-.btn-s{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#1A1A34;color:#FFFFFF;border:1px solid #2A2A50;padding:13px 32px;min-height:44px;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;border-radius:9999px;transition:border-color 0.2s,color 0.2s,transform 0.2s;text-decoration:none;white-space:nowrap;}
-.btn-s:hover{border-color:#00C896;color:#00C896;transform:translateY(-2px);}
-.card{background:#1A1A34;border:1px solid #2A2A50;border-radius:16px;transition:border-color 0.25s,box-shadow 0.25s;}
-.card:hover{border-color:rgba(0,200,150,0.38);box-shadow:0 0 0 1px rgba(0,200,150,0.12),0 16px 40px rgba(0,0,0,0.5);}
+.btn-s{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:#171732;color:#FFFFFF;border:1px solid #32325C;padding:14px 26px;min-height:46px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.01em;cursor:pointer;border-radius:12px;transition:border-color 0.18s,color 0.18s,background 0.18s,transform 0.18s;text-decoration:none;white-space:nowrap;}
+.btn-s:hover{border-color:rgba(0,200,150,0.55);background:#1C1C3C;color:#00FFD1;transform:translateY(-1px);}
+.card{background:#1A1A34;border:1px solid #2A2A50;border-radius:16px;transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;}
+.card:hover{border-color:rgba(0,200,150,0.34);transform:translateY(-2px);box-shadow:0 18px 38px -22px rgba(0,0,0,0.85);}
 .tag{display:inline-block;padding:4px 12px;border-radius:9999px;background:rgba(0,200,150,0.10);color:#00C896;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border:1px solid rgba(0,200,150,0.22);}
 .nav-link{color:#C4C8E0;text-decoration:none;font-size:13px;font-weight:600;transition:color 0.2s;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;}
 .nav-link:hover,.nav-link.active{color:#FFFFFF;}
@@ -358,7 +358,8 @@ function Hero({ onConsult }) {
         </h1>
 
         <p className="body-text"
-          style={{maxWidth:540,marginBottom:48,animation:"fadeUp 0.6s ease 0.2s both"}}>
+          style={{maxWidth:560,marginBottom:48,fontSize:"clamp(16px,1.7vw,18px)",
+            lineHeight:1.65,color:"#D6DAEE",animation:"fadeUp 0.6s ease 0.2s both"}}>
           We apply AI and automation to eliminate the operational problems slowing your organisation down — manual processes, disconnected data, slow decisions. Any industry. Any problem. Any scale.
         </p>
 
@@ -455,7 +456,7 @@ function WhatWeDo() {
   ];
   return (
     <section id="what-we-do" aria-labelledby="whatwedo-heading"
-      style={{background:T.bg1,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
+      style={{background:T.bg0,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
       className="s-pad">
       <div style={{maxWidth:1080,margin:"0 auto"}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",
@@ -514,7 +515,7 @@ function Solutions() {
   ];
   return (
     <section id="solutions" aria-labelledby="solutions-heading"
-      style={{background:T.bg0,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
+      style={{background:T.bg1,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
       className="s-pad">
       <div style={{maxWidth:1080,margin:"0 auto"}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",
@@ -536,21 +537,34 @@ function Solutions() {
           </div>
         </div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(290px,1fr))",gap:16}}>
-          {sols.map((s,i) => (
-            <article key={i} className="card" style={{padding:"28px 24px"}}>
-              <div style={{display:"inline-block",marginBottom:14,
-                background:T.bg2,border:`1px solid ${T.bdr}`,
-                borderRadius:"9999px",padding:"3px 12px"}}>
-                <span style={{fontSize:10,fontWeight:700,letterSpacing:"0.14em",
-                  textTransform:"uppercase",color:T.muted}}>{s.cat}</span>
+          {sols.map((s,i) => {
+            const lead = i===0;
+            return (
+            <article key={i} className="card"
+              style={{padding:"28px 24px",display:"flex",flexDirection:"column",
+                ...(lead ? {background:"linear-gradient(160deg,rgba(0,200,150,0.09),#1A1A34 62%)",
+                  borderColor:"rgba(0,200,150,0.30)"} : null)}}>
+              <div style={{display:"flex",alignItems:"baseline",justifyContent:"space-between",
+                gap:12,marginBottom:14}}>
+                <div style={{display:"inline-block",
+                  background: lead ? "rgba(0,200,150,0.14)" : T.bg2,
+                  border:`1px solid ${lead ? "rgba(0,200,150,0.32)" : T.bdr}`,
+                  borderRadius:"9999px",padding:"3px 12px"}}>
+                  <span style={{fontSize:10,fontWeight:700,letterSpacing:"0.14em",
+                    textTransform:"uppercase",color: lead ? T.teal : T.muted}}>{s.cat}</span>
+                </div>
+                <span aria-hidden="true" style={{fontFamily:"'Outfit',sans-serif",fontWeight:900,
+                  fontSize:14,letterSpacing:"0.04em",
+                  color: lead ? T.teal : T.dim}}>{String(i+1).padStart(2,"0")}</span>
               </div>
-              <h3 className="strong" style={{fontSize:15,marginBottom:10,lineHeight:1.4}}>{s.hl}</h3>
+              <h3 className="strong" style={{fontSize: lead ? 17 : 15,marginBottom:10,lineHeight:1.4}}>{s.hl}</h3>
               <p style={{fontSize:13.5,color:T.body,lineHeight:1.78,marginBottom:16}}>{s.desc}</p>
-              <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
+              <div style={{display:"flex",flexWrap:"wrap",gap:8,marginTop:"auto"}}>
                 {s.tags.map(t => <span key={t} className="tag">{t}</span>)}
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
@@ -568,7 +582,7 @@ function WhoWeWorkWith() {
     { label:"Financial Services",                  accent:T.teal    },
   ];
   return (
-    <section style={{background:T.bg1,borderTop:`1px solid ${T.bdr}`,padding:"80px 40px"}}
+    <section style={{background:T.bg0,borderTop:`1px solid ${T.bdr}`,padding:"80px 40px"}}
       className="s-pad">
       <div style={{maxWidth:1080,margin:"0 auto"}}>
         <div className="sec-label">
@@ -610,7 +624,7 @@ function Process() {
   ];
   return (
     <section id="process" aria-labelledby="process-heading"
-      style={{background:T.bg0,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
+      style={{background:T.bg1,borderTop:`1px solid ${T.bdr}`,padding:"96px 40px"}}
       className="s-pad">
       <div style={{maxWidth:1080,margin:"0 auto"}}>
         <div className="sec-label">
@@ -657,11 +671,9 @@ function CTABanner({ onConsult }) {
         background:`radial-gradient(ellipse 60% 55% at 50% 100%,rgba(0,200,150,0.10) 0%,transparent 70%),${T.bg1}`,
         borderTop:`1px solid ${T.bdr}`,textAlign:"center",position:"relative",overflow:"hidden"}}
       className="s-pad">
-      {[360,240,140].map((sz,i) => (
-        <div key={i} aria-hidden="true" style={{position:"absolute",top:"50%",left:"50%",
-          transform:"translate(-50%,-50%)",width:sz,height:sz,borderRadius:"50%",
-          border:`1px solid rgba(0,200,150,${0.06+i*0.04})`,pointerEvents:"none"}}/>
-      ))}
+      <div aria-hidden="true" style={{position:"absolute",top:"50%",left:"50%",
+        transform:"translate(-50%,-50%)",width:520,height:520,borderRadius:"50%",
+        border:"1px solid rgba(0,200,150,0.10)",pointerEvents:"none"}}/>
       <div style={{position:"relative",zIndex:1,maxWidth:620,margin:"0 auto"}}>
         <div className="sec-label" style={{alignItems:"center",marginBottom:32}}>
           <div className="sec-divider" style={{margin:"0 auto"}}/>
