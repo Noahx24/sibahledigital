@@ -280,58 +280,6 @@
       <span class="arrow">→</span>
     </a>
 
-    <form class="card" action="https://www.payfast.co.za/eng/process" method="post">
-
-      <!-- PayFast required fields -->
-      <input type="hidden" name="return_url" value="https://www.sibahledigital.co.za/links">
-      <input required type="hidden" name="cmd" value="_paynow">
-      <input required type="hidden" name="receiver" pattern="[0-9]" value="18164611">
-      <input type="hidden" name="item_name" value="Donations">
-      <input type="hidden" name="return_url" value="https://www.sibahledigital.co.za/links">
-      <input type="hidden" name="cancel_url" value="https://www.sibahledigital.co.za/links">
-
-      <!-- Amount input (styled, no table) -->
-      <div style="display:flex; flex-direction:column; gap:8px; flex:1;">
-        <div class="label">Support Our Work</div>
-        <div class="title">Donate via PayFast</div>
-
-        <input
-          id="PayFastAmount"
-          type="number"
-          name="amount"
-          step="0.01"
-          min="5"
-          placeholder="Enter amount (e.g. 10.00)"
-          required
-          style="
-            height:42px;
-            border-radius:10px;
-            border:1px solid rgba(0,0,0,0.1);
-            padding:0 12px;
-            font-family: inherit;
-            outline:none;
-          "
-        />
-      </div>
-
-      <!-- Icon -->
-      <div class="icon">
-        <svg viewBox="0 0 24 24">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-        </svg>
-      </div>
-
-      <span class="arrow">→</span>
-
-      <!-- Full-card click -->
-      <button type="submit" style="
-        position:absolute;
-        inset:0;
-        opacity:0;
-        cursor:pointer;
-      "></button>
-
-    </form>
  </nav>
 
   <footer class="footer">
